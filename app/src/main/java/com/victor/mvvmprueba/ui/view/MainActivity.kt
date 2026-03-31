@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.victor.mvvmprueba.databinding.ActivityMainBinding
 import com.victor.mvvmprueba.ui.viewmodel.QuoteViewModel
@@ -11,6 +12,9 @@ import com.victor.mvvmprueba.ui.viewmodel.QuoteViewModel
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
+
+
+
 
     private val quoteViewModel : QuoteViewModel by viewModels()
 
@@ -21,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        quoteViewModel.onCreate()
 
         quoteViewModel.quoteModel.observe(this, Observer {
             binding.tvQuote.text = it.quote
@@ -28,9 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        quoteViewModel.isLoading.observe(this, Observer {
+            binding.progress.isVisible = it
+        })
+
 
         binding.viewContainer.setOnClickListener {
             quoteViewModel.randomQuote()
         }
+
+
     }
 }
