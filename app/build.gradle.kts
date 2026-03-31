@@ -40,6 +40,18 @@ android {
 }
 
 dependencies {
+
+    var lifecycle_version = "2.10.0"
+    var arch_version = "2.2.0"
+
+// ViewModel y utilidades para Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+
+// LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
