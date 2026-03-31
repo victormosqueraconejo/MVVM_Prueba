@@ -43,6 +43,8 @@ dependencies {
 
     var lifecycle_version = "2.10.0"
     var arch_version = "2.2.0"
+    val retrofitVersion = "2.9.0"
+    val coroutinesVersion = "1.7.3"
 
 // ViewModel y utilidades para Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
@@ -50,6 +52,16 @@ dependencies {
 
 // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+
+
+
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+
+
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
 
     implementation(libs.androidx.core.ktx)

@@ -1,13 +1,12 @@
-package com.victor.mvvmprueba.view
+package com.victor.mvvmprueba.ui.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelStore
 import com.victor.mvvmprueba.databinding.ActivityMainBinding
-import com.victor.mvvmprueba.viewmodel.QuoteViewModel
+import com.victor.mvvmprueba.ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
 

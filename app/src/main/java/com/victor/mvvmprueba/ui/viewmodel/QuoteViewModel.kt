@@ -1,9 +1,9 @@
-package com.victor.mvvmprueba.viewmodel
+package com.victor.mvvmprueba.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.victor.mvvmprueba.model.QuoteModel
-import com.victor.mvvmprueba.model.QuoteProvider
+import com.victor.mvvmprueba.data.model.QuoteModel
+import com.victor.mvvmprueba.data.model.QuoteProvider
 
 class QuoteViewModel : ViewModel() {
 
